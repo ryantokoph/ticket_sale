@@ -16,10 +16,8 @@ while tickets_remaining >= 1:
         num_tickets = int(num_tickets)
         if num_tickets > tickets_remaining:
             raise ValueError("There aren't that many tickets available")
-        elif num_tickets == 81:
-            raise ValueError("nobody buys 81 tickets yo")
     except ValueError as err:
-        print("We ran into an issue. {}. Please try again.".format(err))
+        print("Oh no! We ran into an issue. {} Please try again.".format(err))
     else:
         ticket_cost = calculate_price(num_tickets)
         print("{} tickets will cost ${}.".format(num_tickets, ticket_cost))
